@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Hangman.Controllers
 {
-  public class GameController : Controller
+  public class GamesController : Controller
   {
 
     // [HttpGet("/game")]

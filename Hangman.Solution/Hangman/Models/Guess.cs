@@ -4,13 +4,15 @@ using System.Collections.Generic;
 namespace Hangman.Models
 {
     
-  public class Game
+  public class Guess
   {
     public string Answer{get;}
-    public List<Guess> guesses = new List<Guess>();
-    public Game(string answer){
+    public string Letter {get;}
+    private static List<Guess> _guesses = new List<Guess>();
+    public Guess(string letter){
       Answer = answer;
     }
+
 
   }
 }

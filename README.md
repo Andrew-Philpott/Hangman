@@ -1,16 +1,13 @@
-# [Project Name](https://github.com/ayohana/ProjectName.git/)
+# Hangman
 
-#### C# Basic Web Applications Exercise for [Epicodus](https://www.epicodus.com/), 03.11.2020
+#### C# Basic Web Applications Exercise for [Epicodus](https://www.epicodus.com/), 03.12.2020
 
-#### By [**Adela Darmansyah**](https://ayohana.github.io/portfolio/)
+#### By **Adela Darmansyah and Andrew Philpott**
 
-## Description
+## Pair Program WFH Summary
 
-**Describe project here**
-
-## User Stories
-
-* As a ..., I want to be able to ... so that ...
+* Hangman Project
+* Struggles:
 
 ## Specs
 
@@ -20,18 +17,25 @@
 | Spec | `Console` Input | `Console` Output |
 | :-------------     | :------------- | :------------- |
 | **Test** | input | output |
+| **Test** | input | output |
 
 
 </details>
 
-<details>
-| :-------------------------------------------------------------------------------------------------- | :-------------- | :--------------------------------------- |
-|
-| |   |                             |
-|                                      |         |                             |
-|                             | |                                 |
-|                |      |                   |
+## RESTful Http Routes
 
+<details>
+  <summary>Click to expand!</summary>
+| Route Name | URL Path | HTTP Method | Purpose |
+| :--------- | :------- | :---------- | :------- |
+| Index | /game | GET | Displays the hangman and guessed letters |
+| Show | /game/{id} | GET | Displays end of game |
+
+| Index | /guess | GET | Displays a list of all guesses |
+| New | /guess/new | GET | Offers a form for user to input their guess (1 letter) |
+| Create | /guess | POST | Create a new guess object |
+| Show | / |
+| Index | / |
 </details>
 
 ## Setup/Installation Requirements
@@ -39,10 +43,10 @@
 * Download [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
 * Clone this [repository](https://github.com/ayohana/anagram.git/)
 * Open the `Command Line Interface`.
-  * Navigate into the `ProjectName` directory.
+  * Navigate into the `Hangman` directory.
     * Type in the command `dotnet restore` to gather tools and dependencies for the application.
     * Type in the command `dotnet run` to run the application.
-  * Navigate into the `ProjectName.Tests` directory.
+  * Navigate into the `Hangman.Tests` directory.
     * Type in the command `dotnet restore` to gather tools and dependencies for the tests.
     * Type in the command `dotnet test` to run the tests. 
 
@@ -52,7 +56,7 @@ No known bugs at this time.
 
 ## Support and contact details
 
-Feel free to provide feedback via email: adela.yohana@gmail.com.
+Feel free to provide feedback via email: adela.yohana@gmail.com and andrewphilpott92@gmail.com
 
 ## Technologies Used
 
