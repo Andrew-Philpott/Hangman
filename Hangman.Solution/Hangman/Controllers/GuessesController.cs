@@ -7,29 +7,34 @@ namespace Hangman.Controllers
   public class GuessesController : Controller
   {
     // Displays ALL incorrect AND correct guesses
-    [HttpGet("/game/{id}/guesses")]
-    public ActionResult Index()
+    [HttpGet("/games/{id}/guesses")]
+    public ActionResult Index(int id)
     {
-      return View (Guess.GetAllGuesses()); 
+
+      return View(Guess.GetAllGuesses());
     }
 
     // Offers a form to enter a new guess
-    [HttpGet("/game/{id}/guesses/new")]
-    public ActionResult New()
-    { 
-      return View();
-    }
-    
-    // Creates a guess object
-    [HttpPost("/game/{id}/guesses")]  
-    public ActionResult Create(int id, string guess)
+    [HttpGet("/games/{id}/guesses/new")]
+    public ActionResult New(int id)
     {
-      Guess newGuess = new Guess(guess);
-      if(Game.Find(id).CheckGuess(newGuess)) {
-        Game.Find(id);
-      }
-      Game.Find(id).CheckGuess(newGuess);
-      return RedirectToAction("View");
+      return View(Game.Find(id));
+    }
+
+    // Creates a guess object
+    [HttpPost("/games/{id}/guesses/create")]
+    public ActionResult Create(int id, string letterGuess)
+    {
+      Guess newGuess = new Guess(letterGuess);
+      Game.Find(id).AddGuess(newGuess);
+      // Game game = Game.Find(id).CheckGuess()
+      // game.a
+      // AddGuess
+      // if (Game.Find(id).CheckGuess(newGuess))
+      // {
+      //   Game.Find(id);
+      // }
+      return RedirectToAction("Show", "GamesController", id);
     }
   }
 }

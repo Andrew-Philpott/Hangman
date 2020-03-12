@@ -4,24 +4,14 @@
 
 #### By **Adela Darmansyah and Andrew Philpott**
 
-## Pair Program WFH Summary 
+## Pair Program WFH Summary
 
-* Hangman Project
-* Attend the Epicodus Trade Show
-* Objects within objects
-* Implement unique IDs
-* Use RESTful naming convention for Http routes
-* Struggles:
-
-The home page welcomes you to hangman and has a link to the game index
-
-Game index will have a link to create a game, after creating the game we should route to the newly created games show page
-the game index will have the list of games (called by the static getallgames)
-There will be a list of links to each of the different games
-
-
-for a games show page we should have a link going back to the game index page
-
+- Hangman Project
+- Attend the Epicodus Trade Show
+- Objects within objects
+- Implement unique IDs
+- Use RESTful naming convention for Http routes
+- Struggles:
 
 ## RESTful Http Routes
 
@@ -43,20 +33,30 @@ for a games show page we should have a link going back to the game index page
  
 ## Parking Lot
 
-* Timestamp of start of a game
-* Game show page will have a link to show the differences between that specific game score versus the average scores of all games
+- Timestamp of start of a game
+- Game show page will have a link to show the differences between that specific game score versus the average scores of all games
+
+## Notes
+
+The home page welcomes you to hangman and has a link to the game index
+
+Game index will have a link to create a game, after creating the game we should route to the newly created games show page
+the game index will have the list of games (called by the static getallgames)
+There will be a list of links to each of the different games
+
+for a games show page we should have a link going back to the game index page
 
 ## Setup/Installation Requirements
 
-* Download [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
-* Clone this [repository](https://github.com/ayohana/anagram.git/)
-* Open the `Command Line Interface`.
-  * Navigate into the `Hangman` directory.
-    * Type in the command `dotnet restore` to gather tools and dependencies for the application.
-    * Type in the command `dotnet run` to run the application.
-  * Navigate into the `Hangman.Tests` directory.
-    * Type in the command `dotnet restore` to gather tools and dependencies for the tests.
-    * Type in the command `dotnet test` to run the tests. 
+- Download [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
+- Clone this [repository](https://github.com/ayohana/anagram.git/)
+- Open the `Command Line Interface`.
+  - Navigate into the `Hangman` directory.
+    - Type in the command `dotnet restore` to gather tools and dependencies for the application.
+    - Type in the command `dotnet run` to run the application.
+  - Navigate into the `Hangman.Tests` directory.
+    - Type in the command `dotnet restore` to gather tools and dependencies for the tests.
+    - Type in the command `dotnet test` to run the tests.
 
 ## Known Bugs
 
@@ -68,9 +68,9 @@ Feel free to provide feedback via email: adela.yohana@gmail.com and andrewphilpo
 
 ## Technologies Used
 
-* C#
-* [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
-* MVC Pattern
+- C#
+- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
+- MVC Pattern
 
 ### License
 

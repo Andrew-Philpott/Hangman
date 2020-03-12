@@ -1,6 +1,52 @@
 body {
   background-color: rgb(17, 35, 75);
-  color: white;
+  color: rgb(233, 229, 229);
+  text-align: center;
+}
+
+a {
+  color: rgb(238, 255, 0);
+}
+
+a:hover {
+  color: rgb(247, 248, 225);
+}
+
+ul {
+  list-style-type: none;
+  background: rgb(236, 49, 90);
+  padding: 20px;
+}
+
+ul li {
+  background: lightcoral;
+  padding: 20px;
+}
+
+input[type="text"],
+select {
+  color: rgb(236, 49, 90);
+  font-weight: bold;
+  width: 10%;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #555;
+}
+
+input[type="submit"] {
+  color: goldenrod;
+  background-color: lightcoral;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(235, 52, 52);
 }
 
 .jumbotron {

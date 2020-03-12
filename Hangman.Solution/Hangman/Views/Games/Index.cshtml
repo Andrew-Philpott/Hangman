@@ -8,9 +8,12 @@
   <h1>Let's get started</h1>
   <h2><a href="/games/new">Create a hangman game!</a></h2>
 }
-<h1>Your hangman games</h1>
-<ul>
-@foreach(Game game in @Model) {
-   <li><a href='/games/@game.Id'>Game: @game.Id</a></li>
+else
+{
+  <h1>Your hangman games:</h1>
+  <ul>
+  @foreach(Game game in @Model) {
+    <li><a href='/games/@game.Id'>Game: @game.Id</a></li>
+  }
+  </ul> 
 }
-</ul>

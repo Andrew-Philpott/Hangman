@@ -26,16 +26,13 @@
     <div id="incorrect-guesses">
     <h2>Incorrect Guesses</h2>
     <p>
-      @foreach(Guess guess in @Model.Get]) {
+      @foreach(Guess guess in @Model.GetAllIncorrectGuesses()) {
           <span class="letter">@guess.Answer</span>
           <span class="letter-spacer">&nbsp;</span>
       }
     </p>
   </div>
-  <a href='/game/@Model["Id"]/guesses/new'>Make a Guess!</a>
-  <a href='/game/@Model["Id"]/guesses'>See all guesses</a>
+  <a href='/games/@Model.Id/guesses/new'>Make a Guess!</a>
+  <a href='/games/@Model.Id/guesses'>See all guesses</a>
   <a href='/games'>Back to games</a>
-</div>
-
-
-@* Razor code goes here *@
+</div> 

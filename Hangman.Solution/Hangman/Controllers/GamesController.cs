@@ -21,16 +21,23 @@ namespace Hangman.Controllers
       return View();
     }
 
-    // Creates a new game object and passes it to Show()
-    [HttpPost("/games/{Id}")]
-    public ActionResult Create()
+    [HttpPost("/games")]
+    public ActionResult CreateRandom()
     {
       Game game = new Game();
-      return View("Show", game.Id);
+      return RedirectToAction("Index");
     }
-  
+
+    // Creates a new game object and passes it to Show()
+    // [HttpPost("/games")]
+    // public ActionResult Create(string answer)
+    // {
+    //   Game game = new Game(answer);
+    //   return RedirectToAction("Index");
+    // }
+
     // Displays a specific game
-    [HttpGet("/games/{Id}")]  
+    [HttpGet("/games/{Id}/show")]
     public ActionResult Show(int Id)
     {
       return View(Game.Find(Id));
