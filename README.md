@@ -7,6 +7,7 @@
 ## Pair Program WFH Summary
 
 * Hangman Project
+* Attend the Epicodus Trade Show
 * Struggles:
 
 ## Specs

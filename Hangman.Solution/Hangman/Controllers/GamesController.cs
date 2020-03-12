@@ -7,11 +7,11 @@ namespace Hangman.Controllers
   public class GamesController : Controller
   {
 
-    // [HttpGet("/game")]
-    // public ActionResult Index()
-    // {
-    //   return View();
-    // }
+    [HttpGet("/game")]
+    public ActionResult Index()
+    {
+      return View();
+    }
 
   }
 }

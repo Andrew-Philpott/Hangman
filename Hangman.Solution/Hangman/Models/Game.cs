@@ -20,7 +20,6 @@ namespace Hangman.Models
     public string Answer { get; }
     private Dictionary<int, string> _words = new Dictionary<int, string> { 
       {1, "epicodus"}, {2, "programming"}, {3, "string"}, {4, "dictionary"}, {5, "internet"} };
-   
     
     public Game(){
       Id = GameId++;
@@ -31,13 +30,11 @@ namespace Hangman.Models
       Id = GameId++;
       Answer  = answer;
       char[] letters = answer.ToLower().ToCharArray();
-      for(int i = 0; i < letters.length; i++){
+      for(int i = 0; i < letters.Length; i++){
         Letter letter = new Letter(letters[i])
         Letters.Add(letter);
       }
     }
- 
-    
     
     public bool CheckGuess(Guess guess){
       if(guess.Answer.length != 1) {
