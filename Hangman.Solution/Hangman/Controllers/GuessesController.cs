@@ -11,7 +11,7 @@ namespace Hangman.Controllers
       return Guess.GetAllGuesses();
     }
 
-    [HttpGet("/guesses/{id}/new")]
+    [HttpGet("/game/{id}/new")]
     public ActionResult New(){
       return View();
     }

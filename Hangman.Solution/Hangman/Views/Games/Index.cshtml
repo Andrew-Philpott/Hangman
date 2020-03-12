@@ -6,38 +6,16 @@
 
 @if (@Model.Count == 0) {
   <h1>Let's get started</h1>
-  <h2><a href="/game">Create a hangman game!</a></h2>
+  <h2><a href="/game/new">Create a hangman game!</a></h2>
 }
+<h1>Your hangman games</h1>
+<ul>
+@foreach(Game game in @Model) {
+   <li><a href='/games/@game.Id/show'>Game: @game.Id</a></li>
+}
+</ul>
 
-<div class="hangman-content">
-  <div class="hangman-container">
-    <img id="hangman-img" src="" />
-  </div>
-  <div class="hangman-container">
-    <div id="letters">
-      <p>
-      @foreach(Letter letter in @Model["letters"]) {
-        if(@letter.CorrectlyGuessed) {
-          <span class="letter">@letter.Character</span>
-          <span class="letter-spacer">&nbsp;</span>
-        } else {
-          <span class="letter"></span>
-          <span class="letter-spacer">&nbsp;</span>
-        }
-      }
-      </p>
-    </div>
-  </div>
-  <div class="hangman-container">
-    <div id="incorrect-guesses">
-    <h2>Incorrect Guesses</h2>
-    <p>
-      @foreach(Guess guess in @Model["incorrectGuesses"]) {
-          <span class="letter">@guess.Answer</span>
-          <span class="letter-spacer">&nbsp;</span>
-      }
-    </p>
-  </div>
-</div>
+
+
 
 @* Razor code goes here *@

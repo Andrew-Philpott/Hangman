@@ -1,5 +1,39 @@
 @{
   Layout = "_Layout";
 }
+<div class="hangman-content">
+  <div class="hangman-container">
+    <img id="hangman-img" src="" />
+  </div>
+  <div class="hangman-container">
+    <div id="letters">
+      <p>
+      @foreach(Letter letter in @Model["letters"]) {
+        if(@letter.CorrectlyGuessed) {
+          <span class="letter">@letter.Character</span>
+          <span class="letter-spacer">&nbsp;</span>
+        } else {
+          <span class="letter"></span>
+          <span class="letter-spacer">&nbsp;</span>
+        }
+      }
+      </p>
+    </div>
+  </div>
+  <div class="hangman-container">
+    <div id="incorrect-guesses">
+    <h2>Incorrect Guesses</h2>
+    <p>
+      @foreach(Guess guess in @Model["incorrectGuesses"]) {
+          <span class="letter">@guess.Answer</span>
+          <span class="letter-spacer">&nbsp;</span>
+      }
+    </p>
+  </div>
+  <a href='/game/@Model["Id"]/guesses/new'>Make a Guess!</a>
+  <a href='/game/@Model["Id"]/guesses'>See all guesses</a>
+  <a href='/games'>Back to games</a>
+</div>
+
 
 @* Razor code goes here *@

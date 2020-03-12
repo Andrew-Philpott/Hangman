@@ -4,24 +4,24 @@
 
 #### By **Adela Darmansyah and Andrew Philpott**
 
-## Pair Program WFH Summary
+## Pair Program WFH Summary 
 
 * Hangman Project
 * Attend the Epicodus Trade Show
+* Objects within objects
+* Implement unique IDs
+* Use RESTful naming convention for Http routes
 * Struggles:
 
-## Specs
+The home page welcomes you to hangman and has a link to the game index
 
-<details>
-  <summary>Click to expand!</summary>
-
-| Spec | `Console` Input | `Console` Output |
-| :-------------     | :------------- | :------------- |
-| **Test** | input | output |
-| **Test** | input | output |
+Game index will have a link to create a game, after creating the game we should route to the newly created games show page
+the game index will have the list of games (called by the static getallgames)
+There will be a list of links to each of the different games
 
 
-</details>
+for a games show page we should have a link going back to the game index page
+
 
 ## RESTful Http Routes
 
@@ -29,13 +29,21 @@
   <summary>Click to expand!</summary>
 | Route Name | URL Path | HTTP Method | Purpose |
 | :--------- | :------- | :---------- | :------- |
-| Index | /game/{id} | GET | Displays the hangman and guessed letters |
+| Index | / | GET | Homepage: displays welcome message & link to create new game |
+| Create | /game/{id} | POST | Create a new game object |
+| Index | /game | GET | Displays list of all games |
+| Index | /game/{id} | GET | Displays a specific game: the hangman and guessed letters |
 | Show | /game/{id}/over | GET | Displays gameover |
 | New | /game/{id}/guess/new | GET | Offers a form for user to input their guess (1 letter) |
 | Create | /game/{id}/guess | POST | Create a new guess object |
 | Show | /game/{id}/guess/correct | Displays a list of all correct guesses |
 | Show | /game/{id}/guess/incorrect | Displays a list of all incorrect guesses |
 </details>
+ 
+## Parking Lot
+
+* Timestamp of start of a game
+* Game show page will have a link to show the differences between that specific game score versus the average scores of all games
 
 ## Setup/Installation Requirements
 

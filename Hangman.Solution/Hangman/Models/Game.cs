@@ -5,13 +5,7 @@ namespace Hangman.Models
 {    
   public class Game
   {
-    public class Letter{
-      public bool CorrectlyGuessed{get;set;}
-      public char Character {get;set;}
-      public Letter(char letter){
-        Character = letter;
-      }
-    }
+    private static List<Game> Games = new List<Game>();
     public static int GameId{get;set;} = 0;
     public int Id {get;} 
     private List<Guess> _correctLetterGuesses = new List<Guess>();
@@ -21,6 +15,13 @@ namespace Hangman.Models
     private Dictionary<int, string> _words = new Dictionary<int, string> { 
       {1, "epicodus"}, {2, "programming"}, {3, "string"}, {4, "dictionary"}, {5, "internet"} };
     
+    public class Letter{
+      public bool CorrectlyGuessed{get;set;}
+      public char Character {get;set;}
+      public Letter(char letter){
+        Character = letter;
+      }
+    }
     public Game(){
       Id = GameId++;
       Answer = GenerateRandomWord();
@@ -37,7 +38,7 @@ namespace Hangman.Models
     }
     
     public bool CheckGuess(Guess guess){
-      if(guess.Answer.length != 1) {
+      if(guess.Answer.Length != 1) {
         if(guess.Answer == this.Answer){
           return true;
         }
@@ -45,7 +46,7 @@ namespace Hangman.Models
       } else {
         foreach (Letter letter in Letters)
         {
-          if(letter.Character == guess.Answer){
+          if(letter.Character.ToString() == guess.Answer){
             letter.CorrectlyGuessed = true;
           }
         }
@@ -70,6 +71,10 @@ namespace Hangman.Models
     public List<Guess> GetAllIncorrectGuesses()
     {
       return _incorrectLetterGuesses;
+    }
+
+    public static List<Game> GetAllGames(){
+      return Games;
     }
 
     private string GenerateRandomWord()
