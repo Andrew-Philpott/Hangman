@@ -74,4 +74,4 @@ Feel free to provide feedback via email: adela.yohana@gmail.com and andrewphilpo
 
 This C# console application is licensed under the MIT license.
 
-Copyright (c) 2020 **Adela Darmansyah**
+Copyright (c) 2020 **Adela Darmansyah & Andrew Philpott**
