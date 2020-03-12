@@ -26,15 +26,8 @@ namespace Hangman.Controllers
     public ActionResult Create(int id, string letterGuess)
     {
       Guess newGuess = new Guess(letterGuess);
-      Game.Find(id).AddGuess(newGuess);
-      // Game game = Game.Find(id).CheckGuess()
-      // game.a
-      // AddGuess
-      // if (Game.Find(id).CheckGuess(newGuess))
-      // {
-      //   Game.Find(id);
-      // }
-      return RedirectToAction("Show", "GamesController", id);
+      Game.Find(id).AddIncorrectGuess(newGuess);
+      return RedirectToAction(id.ToString(), "games");
     }
   }
 }

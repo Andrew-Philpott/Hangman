@@ -37,10 +37,11 @@ namespace Hangman.Controllers
     // }
 
     // Displays a specific game
-    [HttpGet("/games/{Id}/show")]
+    [HttpGet("/games/{Id}")]
     public ActionResult Show(int Id)
     {
-      return View(Game.Find(Id));
+      Game game = Game.Find(Id);
+      return View(game);
     }
 
   }

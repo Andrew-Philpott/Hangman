@@ -5,8 +5,10 @@
 }
 
 
-<form action="/games/@Model.Id/show" method="post">
+<form action="/games/{id}/guesses/create" method="post">
   <label for="letterGuess">Enter a letter:</label>
+  <br>
   <input id="letterGuess" name="letterGuess" type="text">
+  <br>
   <button type="submit">How's my guess?</button>
 </form>

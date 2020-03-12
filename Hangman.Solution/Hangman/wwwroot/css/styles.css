@@ -1,7 +1,9 @@
 body {
   background-color: rgb(17, 35, 75);
+  font-size: large;
   color: rgb(233, 229, 229);
   text-align: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -29,6 +31,7 @@ select {
   font-weight: bold;
   width: 10%;
   padding: 10px;
+  margin: 5px;
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -37,26 +40,69 @@ input[type="text"]:focus {
   border: 3px solid #555;
 }
 
-input[type="submit"] {
-  color: goldenrod;
+button {
+  color: rgb(88, 77, 15);
+  font-weight: bold;
   background-color: lightcoral;
   padding: 10px;
+  margin: 5px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+button:hover {
   background-color: rgb(235, 52, 52);
 }
 
 .jumbotron {
-  background-color: rgb(30, 30, 107);
+  background-color: rgb(15, 15, 46);
+  font-family: "Cinzel Decorative", cursive;
 }
 
 .letter {
-  border-bottom: 2x;
+  border-bottom: 2px solid black;
+  padding-bottom: 4px;
 }
 
 .hangman-container {
   margin-top: 5%;
+}
+
+div#homeAnimation {
+  width: 10px;
+  height: 10px;
+  background-color: lightgreen;
+  align-items: center;
+  position: relative;
+  animation-name: box;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes box {
+  0% {
+    background-color: lightgreen;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: lightpink;
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    background-color: lightskyblue;
+    left: 100px;
+    top: 100px;
+  }
+  75% {
+    background-color: lightgoldenrodyellow;
+    left: 0px;
+    top: 100px;
+  }
+  100% {
+    background-color: lightgreen;
+    left: 0px;
+    top: 0px;
+  }
 }

@@ -11,6 +11,8 @@
     <div id="letters">
       <p> 
       @foreach(Letter letter in @Model.GetLetters()) {
+        @* <span class="letter">@letter.Character</span>
+          <span class="letter-spacer">&nbsp;</span> *@
         if(@letter.CorrectlyGuessed) {
           <span class="letter">@letter.Character</span>
           <span class="letter-spacer">&nbsp;</span>
@@ -35,4 +37,4 @@
   <a href='/games/@Model.Id/guesses/new'>Make a Guess!</a>
   <a href='/games/@Model.Id/guesses'>See all guesses</a>
   <a href='/games'>Back to games</a>
-</div> 
+</div>

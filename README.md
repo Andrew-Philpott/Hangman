@@ -11,7 +11,7 @@
 - Objects within objects
 - Implement unique IDs
 - Use RESTful naming convention for Http routes
-- Struggles:
+- Struggles: Controllers, VS code extensions (only host's works)
 
 ## RESTful Http Routes
 
@@ -35,8 +35,6 @@
 
 - Timestamp of start of a game
 - Game show page will have a link to show the differences between that specific game score versus the average scores of all games
-
-## Notes
 
 The home page welcomes you to hangman and has a link to the game index
 

@@ -15,5 +15,6 @@ else
   @foreach(Game game in @Model) {
     <li><a href='/games/@game.Id'>Game: @game.Id</a></li>
   }
-  </ul> 
+  </ul>
+  <h2><a href="/games/new">Create a hangman game!</a></h2>
 }

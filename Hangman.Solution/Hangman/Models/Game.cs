@@ -81,9 +81,15 @@ namespace Hangman.Models
       }
     }
 
-    public void AddGuess(Guess guess)
+    public void AddIncorrectGuess(Guess guess)
     {
-      if (CheckGuess(guess))
+      List<string> characters = new List<string>();
+      for (int i = 0; i < Letters.Count; i++)
+      {
+        characters.Add(Letters[i].Character.ToString());
+      }
+
+      if (!(characters.Contains(guess.Answer)))
       {
         _incorrectLetterGuesses.Add(guess);
       }
