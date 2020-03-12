@@ -2,4 +2,12 @@
   Layout = "_Layout";
 }
 
-@* Razor code goes here *@
+@if (Model.Count == 0)
+{
+  <h4>You did not make any guesses.</h4>
+  <a href="/guess/new">Try again?</a>
+}
+else
+{
+  // displays list of correct guesses
+}

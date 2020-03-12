@@ -28,14 +28,12 @@
   <summary>Click to expand!</summary>
 | Route Name | URL Path | HTTP Method | Purpose |
 | :--------- | :------- | :---------- | :------- |
-| Index | /game | GET | Displays the hangman and guessed letters |
-| Show | /game/{id} | GET | Displays end of game |
-
-| Index | /guess | GET | Displays a list of all guesses |
-| New | /guess/new | GET | Offers a form for user to input their guess (1 letter) |
-| Create | /guess | POST | Create a new guess object |
-| Show | / |
-| Index | / |
+| Index | /game/{id} | GET | Displays the hangman and guessed letters |
+| Show | /game/{id}/over | GET | Displays gameover |
+| New | /game/{id}/guess/new | GET | Offers a form for user to input their guess (1 letter) |
+| Create | /game/{id}/guess | POST | Create a new guess object |
+| Show | /game/{id}/guess/correct | Displays a list of all correct guesses |
+| Show | /game/{id}/guess/incorrect | Displays a list of all incorrect guesses |
 </details>
 
 ## Setup/Installation Requirements

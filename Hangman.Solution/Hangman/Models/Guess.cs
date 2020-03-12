@@ -5,21 +5,11 @@ namespace Hangman.Models
 {
   public class Guess
   { 
-    public char Letter {get;}
-    private static List<Guess> _guesses = new List<Guess>();
-    public Guess(string char)
+    public string Answer {get;}
+    public Guess(string answer)
     {
-      Letter = letter.ToLower();
-      _guesses.Add(this);
+      Answer = answer.ToLower();
     }
 
-    public static List<Guess> GetAll()
-    {
-      return _guesses;
-    }
-
-    public static ClearAllGuesses(){
-      _guesses.Clear();
-    }
   }
-}
+} 
