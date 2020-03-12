@@ -2,4 +2,8 @@
   Layout = "_Layout";
 }
 
-@* Razor code goes here *@
+<form action="/guess" method="post">
+  <label for="letterGuess">Guess a letter:</label>
+  <input id="letterGuess" name="letterGuess" type="text">
+  <button type="submit">Submit</button>
+</form>
