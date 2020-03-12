@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using Hangman.Models;
 using System.Collections.Generic;
 
-namespace ProjectName.Controllers
+namespace Hangman.Controllers
 {
-  public class ClassesNameController : Controller
+  public class GameController : Controller
   {
 
-    // [HttpGet("/classesname")]
+    // [HttpGet("/game")]
     // public ActionResult Index()
     // {
     //   return View();

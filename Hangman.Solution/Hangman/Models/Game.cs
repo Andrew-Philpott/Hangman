@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace ProjectName.Models
+namespace Hangman.Models
 {
-  public class ClassName
+  public class Game
   {
     // Back-end code goes here
   }
