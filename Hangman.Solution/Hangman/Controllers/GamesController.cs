@@ -22,7 +22,7 @@ namespace Hangman.Controllers
     }
 
     // Creates a new game object and passes it to Show()
-    [HttpPost("/games")]
+    [HttpPost("/games/{Id}")]
     public ActionResult Create()
     {
       Game game = new Game();

@@ -22,7 +22,7 @@ namespace Hangman.Controllers
     
     // Creates a guess object
     [HttpPost("/game/{id}/guesses")]  
-    public ActionResult Create(string id, string guess)
+    public ActionResult Create(int id, string guess)
     {
       Guess newGuess = new Guess(guess);
       if(Game.Find(id).CheckGuess(newGuess)) {

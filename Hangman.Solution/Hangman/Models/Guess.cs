@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Hangman.Models
 {
@@ -14,9 +15,9 @@ namespace Hangman.Models
     {
       Id = GuessId++; 
       Answer = answer.ToLower();
-      Guesses.AddGuess(this);
+      AddGuess(this); 
     }
-
+ 
     public static List<Guess> GetAllGuesses()
     {
       return Guesses;
@@ -24,7 +25,7 @@ namespace Hangman.Models
     
     public static void AddGuess(Guess guess) { 
       int id = guess.Id;
-      if(!Guesses.Find(x => x.Id == x)){
+      if(Guesses.Find(x => x.Id == id) != null){
         Guesses.Add(guess);
       }
     }
@@ -34,4 +35,4 @@ namespace Hangman.Models
       return Guesses.Find(x => x.Id == id);
     } 
   }
-} 
+}

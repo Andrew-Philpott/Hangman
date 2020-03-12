@@ -1,3 +1,5 @@
+@using Hangman.Models;
+
 @{
   Layout = "_Layout";
 }
@@ -7,8 +9,8 @@
   </div>
   <div class="hangman-container">
     <div id="letters">
-      <p>
-      @foreach(Letter letter in @Model["letters"]) {
+      <p> 
+      @foreach(Letter letter in @Model.GetLetters()) {
         if(@letter.CorrectlyGuessed) {
           <span class="letter">@letter.Character</span>
           <span class="letter-spacer">&nbsp;</span>
@@ -16,7 +18,7 @@
           <span class="letter"></span>
           <span class="letter-spacer">&nbsp;</span>
         }
-      }
+      } 
       </p>
     </div>
   </div>
@@ -24,7 +26,7 @@
     <div id="incorrect-guesses">
     <h2>Incorrect Guesses</h2>
     <p>
-      @foreach(Guess guess in @Model["incorrectGuesses"]) {
+      @foreach(Guess guess in @Model.Get]) {
           <span class="letter">@guess.Answer</span>
           <span class="letter-spacer">&nbsp;</span>
       }

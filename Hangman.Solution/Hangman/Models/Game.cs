@@ -3,6 +3,15 @@ using System.Collections.Generic;
 
 namespace Hangman.Models
 {    
+  public class Letter
+    {
+      public bool CorrectlyGuessed{get;set;}
+      public char Character {get;set;}
+      public Letter(char letter)
+      {
+        Character = letter;
+      }
+    }
   public class Game
   {
     private static List<Game> Games = new List<Game>();
@@ -15,15 +24,7 @@ namespace Hangman.Models
     private Dictionary<int, string> _words = new Dictionary<int, string> { 
       {1, "epicodus"}, {2, "programming"}, {3, "string"}, {4, "dictionary"}, {5, "internet"} };
     
-    public class Letter
-    {
-      public bool CorrectlyGuessed{get;set;}
-      public char Character {get;set;}
-      public Letter(char letter)
-      {
-        Character = letter;
-      }
-    }
+    
 
     public Game()
     {
@@ -66,6 +67,9 @@ namespace Hangman.Models
       }
     }
   
+    public List<Letter> GetLetters(){
+      return Letters;
+    }
     public List<Guess> GetAllCorrectGuesses()
     {
       return _correctLetterGuesses;
