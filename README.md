@@ -30,14 +30,15 @@ for a games show page we should have a link going back to the game index page
 | Route Name | URL Path | HTTP Method | Purpose |
 | :--------- | :------- | :---------- | :------- |
 | Index | / | GET | Homepage: displays welcome message & link to create new game |
-| Create | /game/{id} | POST | Create a new game object |
-| Index | /game | GET | Displays list of all games |
-| Index | /game/{id} | GET | Displays a specific game: the hangman and guessed letters |
-| Show | /game/{id}/over | GET | Displays gameover |
-| New | /game/{id}/guess/new | GET | Offers a form for user to input their guess (1 letter) |
-| Create | /game/{id}/guess | POST | Create a new guess object |
-| Show | /game/{id}/guess/correct | Displays a list of all correct guesses |
-| Show | /game/{id}/guess/incorrect | Displays a list of all incorrect guesses |
+| Create | /games/{id} | POST | Create a new game object |
+| Index | /games | GET | Displays list of all games |
+| Index | /games/{id} | GET | Displays a specific game: the hangman and guessed letters |
+| Show | /games/{id}/over | GET | Displays gameover |
+| New | /games/{id}/guess/new | GET | Offers a form for user to input their guess (1 letter) |
+| Create | /games/{id}/guess | POST | Create a new guess object |
+| Index | /games/{id}/guess | GET | Displays lists of all correct and incorrect guesses |
+| Show | /games/{id}/guess/correct | GET | Displays a list of all correct guesses |
+| Show | /games/{id}/guess/incorrect | GET | Displays a list of all incorrect guesses |  
 </details>
  
 ## Parking Lot

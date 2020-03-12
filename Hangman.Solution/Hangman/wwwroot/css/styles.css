@@ -1,6 +1,16 @@
+body {
+  background-color: rgb(17, 35, 75);
+  color: white;
+}
+
+.jumbotron {
+  background-color: rgb(30, 30, 107);
+}
+
 .letter {
   border-bottom: 2x;
 }
+
 .hangman-container {
   margin-top: 5%;
 }

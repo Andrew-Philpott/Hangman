@@ -6,20 +6,30 @@ namespace Hangman.Controllers
 {
   public class GuessesController : Controller
   {
-    [HttpGet("/guesses")]
-    public ActionResult Index(){
-      return Guess.GetAllGuesses();
+    // Displays ALL incorrect AND correct guesses
+    [HttpGet("/game/{id}/guesses")]
+    public ActionResult Index()
+    {
+      return View (Guess.GetAllGuesses()); 
     }
 
-    [HttpGet("/game/{id}/new")]
-    public ActionResult New(){
+    // Offers a form to enter a new guess
+    [HttpGet("/game/{id}/guesses/new")]
+    public ActionResult New()
+    { 
       return View();
     }
-
-    [HttpPost("/game/{id}/guesses")]
-    public ActionResult Create(string guess){
+    
+    // Creates a guess object
+    [HttpPost("/game/{id}/guesses")]  
+    public ActionResult Create(string id, string guess)
+    {
       Guess newGuess = new Guess(guess);
-      retu
+      if(Game.Find(id).CheckGuess(newGuess)) {
+        Game.Find(id);
+      }
+      Game.Find(id).CheckGuess(newGuess);
+      return RedirectToAction("View");
     }
   }
 }

@@ -7,28 +7,33 @@ namespace Hangman.Controllers
   public class GamesController : Controller
   {
 
-    [HttpGet("/game")]
+    // Displays ALL games
+    [HttpGet("/games")]
     public ActionResult Index()
     {
       return View(Game.GetAllGames());
     }
 
+    // Offers a form to create a new game
     [HttpGet("/games/new")]
-    public ActionResult New(){
+    public ActionResult New()
+    {
       return View();
     }
 
+    // Creates a new game object and passes it to Show()
     [HttpPost("/games")]
-    public ActionResult Create(){
+    public ActionResult Create()
+    {
       Game game = new Game();
       return View("Show", game.Id);
     }
-
-    [HttpGet("/games/{Id}")]
-    public ActionResult Show(int gameId)
+  
+    // Displays a specific game
+    [HttpGet("/games/{Id}")]  
+    public ActionResult Show(int Id)
     {
-      Game game = Game.Find
-      return View();
+      return View(Game.Find(Id));
     }
 
   }

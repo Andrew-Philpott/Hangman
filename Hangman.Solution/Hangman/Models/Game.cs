@@ -15,29 +15,40 @@ namespace Hangman.Models
     private Dictionary<int, string> _words = new Dictionary<int, string> { 
       {1, "epicodus"}, {2, "programming"}, {3, "string"}, {4, "dictionary"}, {5, "internet"} };
     
-    public class Letter{
+    public class Letter
+    {
       public bool CorrectlyGuessed{get;set;}
       public char Character {get;set;}
-      public Letter(char letter){
+      public Letter(char letter)
+      {
         Character = letter;
       }
     }
-    public Game(){
+
+    public Game()
+    {
       Id = GameId++;
       Answer = GenerateRandomWord();
     }
     
-    public Game(string answer){
+    public Game(string answer)
+    {
       Id = GameId++;
       Answer  = answer;
       char[] letters = answer.ToLower().ToCharArray();
-      for(int i = 0; i < letters.Length; i++){
-        Letter letter = new Letter(letters[i])
+      for(int i = 0; i < letters.Length; i++)
+      {
+        Letter letter = new Letter(letters[i]);
         Letters.Add(letter);
       }
     }
+     //if the word guess is a newly guessed word then add
+     //it to the static list of word guesses
+
     
-    public bool CheckGuess(Guess guess){
+    public bool CheckGuess(Guess guess)
+    {
+      bool isCorrect = false;
       if(guess.Answer.Length != 1) {
         if(guess.Answer == this.Answer){
           return true;
@@ -48,19 +59,11 @@ namespace Hangman.Models
         {
           if(letter.Character.ToString() == guess.Answer){
             letter.CorrectlyGuessed = true;
+            isCorrect = true;
           }
         }
+        return isCorrect;
       }
-      //we have the hangman object with an array of 
-      //objects containing the letter that it represents 
-      //and a boolean for whether or not it should display
-      //on the page (if a correct guess was made it will become true)
-
-      //if correct letter guesses contains the letter
-      // than return false.
-      //same for incorrect letter guesses
-      //else if the character array contains the letter
-      //dont return true yet, but 
     }
   
     public List<Guess> GetAllCorrectGuesses()
@@ -77,6 +80,11 @@ namespace Hangman.Models
       return Games;
     }
 
+    public static Game Find(int id)
+    {
+      return Games.Find(x => x.Id == id);
+    } 
+    
     private string GenerateRandomWord()
     {
       Random random = new Random();
